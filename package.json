@@ -1,6 +1,6 @@
 {
   "name": "@tsonic/globals",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Shared global type definitions for Tsonic (utility types, iterators, Promise, Symbol)",
   "main": "index.d.ts",
   "types": "index.d.ts",
