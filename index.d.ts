@@ -100,6 +100,7 @@ declare global {
   type ConstructorParameters<T extends new (...args: any) => any> = T extends new (...args: infer P) => any ? P : never;
   type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any;
   type InstanceType<T extends new (...args: any) => any> = T extends new (...args: any) => infer R ? R : any;
+  type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T;
 
   /**
    * Promise types
