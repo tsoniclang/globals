@@ -12,7 +12,7 @@
  * For JS mode: Use with @tsonic/js-globals which extends base types with JS methods.
  */
 
-import { String$instance } from "@tsonic/dotnet/System";
+import { String$instance, Double$instance, Boolean$instance } from "@tsonic/dotnet/System";
 
 declare global {
   /**
@@ -37,9 +37,17 @@ declare global {
    */
   interface String extends String$instance {}
 
-  interface Number {}
+  /**
+   * Number - augmented with BCL methods from System.Double
+   * All System.Double instance methods are available on number primitives.
+   */
+  interface Number extends Double$instance {}
 
-  interface Boolean {}
+  /**
+   * Boolean - augmented with BCL methods from System.Boolean
+   * All System.Boolean instance methods are available on boolean primitives.
+   */
+  interface Boolean extends Boolean$instance {}
 
   /**
    * Object - minimal base definition
