@@ -1,7 +1,7 @@
 {
   "name": "@tsonic/globals",
-  "version": "0.2.0",
-  "description": "Shared global type definitions for Tsonic (utility types, iterators, Promise, Symbol)",
+  "version": "0.3.0",
+  "description": "Global type definitions for Tsonic with BCL primitive methods",
   "main": "index.d.ts",
   "types": "index.d.ts",
   "files": [
@@ -10,6 +10,9 @@
   ],
   "scripts": {
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tsonic/dotnet": "^0.7.6"
   },
   "devDependencies": {
     "typescript": "^5.0.0"
