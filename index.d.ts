@@ -6,10 +6,13 @@
  * This package provides:
  * 1. Base types required by TypeScript (Array, String, Object, Function, etc.)
  * 2. Shared types used by both modes (utility types, iterators, Promise, Symbol)
+ * 3. BCL primitive methods on String, Number, Boolean (from @tsonic/dotnet)
  *
- * For dotnet mode: Use this package alone. Arrays use LINQ, strings use BCL.
+ * For dotnet mode: Use this package alone. Primitives have BCL methods.
  * For JS mode: Use with @tsonic/js-globals which extends base types with JS methods.
  */
+
+import { String$instance } from "@tsonic/dotnet/System";
 
 declare global {
   /**
@@ -28,11 +31,11 @@ declare global {
   }
 
   /**
-   * String - minimal base definition
-   * In dotnet mode, use System.String BCL methods
-   * In JS mode, @tsonic/js-globals extends this with .length, .slice, etc.
+   * String - augmented with BCL methods from System.String
+   * All System.String instance methods are available on string primitives.
+   * In JS mode, @tsonic/js-globals may override with JS-specific methods.
    */
-  interface String {}
+  interface String extends String$instance {}
 
   interface Number {}
 
