@@ -12,7 +12,7 @@
  * For JS mode: Use with @tsonic/js-globals which extends base types with JS methods.
  */
 
-import { String$instance, Double$instance, Boolean$instance } from "@tsonic/dotnet/System";
+import { String$instance, Double$instance, Boolean$instance } from "@tsonic/dotnet/System.js";
 
 declare global {
   /**
