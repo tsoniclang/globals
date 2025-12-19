@@ -17,25 +17,27 @@ import {
   Boolean$instance, __Boolean$views,
   Object$instance
 } from "@tsonic/dotnet/System/internal/index.js";
-import { IList_1, ICollection_1, IEnumerable_1, IReadOnlyList_1, IReadOnlyCollection_1 } from "@tsonic/dotnet/System.Collections.Generic/internal/index.js";
+import { IEnumerable_1 } from "@tsonic/dotnet/System.Collections.Generic/internal/index.js";
 
 declare global {
   /**
-   * Array<T> - Synthesized generic array type
+   * Array<T> - C# array type (T[])
    *
-   * Combines:
+   * C# arrays are fixed-size and do NOT have IList<T>/ICollection<T> instance methods.
+   * They only support:
    * - System.Array instance methods (length, rank, clone, copyTo, etc.)
-   * - Generic collection interfaces (IList<T>, ICollection<T>, IEnumerable<T>)
-   * - TypeScript indexer and iterator
+   * - IEnumerable<T> for iteration (foreach)
+   * - Indexer access
    *
-   * This gives arrays full BCL method support.
+   * For mutable collection operations (add, remove, etc.), use List<T> instead.
+   * For LINQ operations (map, filter, etc.), use Enumerable methods.
    */
-  interface Array<T> extends Array$instance, __Array$views, IList_1<T>, ICollection_1<T>, IEnumerable_1<T>, IReadOnlyList_1<T>, IReadOnlyCollection_1<T> {
+  interface Array<T> extends Array$instance, __Array$views, IEnumerable_1<T> {
     [n: number]: T;
     [Symbol.iterator](): IterableIterator<T>;
   }
 
-  interface ReadonlyArray<T> extends Array$instance, __Array$views, IReadOnlyList_1<T>, IReadOnlyCollection_1<T>, IEnumerable_1<T> {
+  interface ReadonlyArray<T> extends Array$instance, __Array$views, IEnumerable_1<T> {
     readonly [n: number]: T;
     [Symbol.iterator](): IterableIterator<T>;
   }
