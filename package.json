@@ -1,6 +1,6 @@
 {
   "name": "@tsonic/globals",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Global type definitions for Tsonic with BCL primitive methods",
   "main": "index.d.ts",
   "types": "index.d.ts",
