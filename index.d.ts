@@ -4,55 +4,61 @@
  * Global type definitions for Tsonic.
  *
  * This package provides:
- * 1. Base types required by TypeScript (Array, String, Object, Function, etc.)
- * 2. Shared types used by both modes (utility types, iterators, Promise, Symbol)
- * 3. BCL primitive methods on String, Number, Boolean (from @tsonic/dotnet)
- *
- * For dotnet mode: Use this package alone. Primitives have BCL methods.
- * For JS mode: Use with @tsonic/js-globals which extends base types with JS methods.
+ * 1. Synthesized Array<T> combining System.Array with generic collection interfaces
+ * 2. BCL primitive methods on String, Number, Boolean (from @tsonic/dotnet)
+ * 3. TypeScript compiler intrinsics (utility types, iterators, Promise, Symbol)
  */
 
-import { String$instance, Double$instance, Boolean$instance } from "@tsonic/dotnet/System.js";
+// BCL types from @tsonic/dotnet
+import {
+  Array$instance, __Array$views,
+  String$instance, __String$views,
+  Double$instance, __Double$views,
+  Boolean$instance, __Boolean$views,
+  Object$instance
+} from "@tsonic/dotnet/System/internal/index.js";
+import { IList_1, ICollection_1, IEnumerable_1, IReadOnlyList_1, IReadOnlyCollection_1 } from "@tsonic/dotnet/System.Collections.Generic/internal/index.js";
 
 declare global {
   /**
-   * Array type - minimal base definition
-   * In dotnet mode, use List<T> methods or LINQ
-   * In JS mode, @tsonic/js-globals extends this with .map, .filter, etc.
+   * Array<T> - Synthesized generic array type
+   *
+   * Combines:
+   * - System.Array instance methods (length, rank, clone, copyTo, etc.)
+   * - Generic collection interfaces (IList<T>, ICollection<T>, IEnumerable<T>)
+   * - TypeScript indexer and iterator
+   *
+   * This gives arrays full BCL method support.
    */
-  interface Array<T> {
+  interface Array<T> extends Array$instance, __Array$views, IList_1<T>, ICollection_1<T>, IEnumerable_1<T>, IReadOnlyList_1<T>, IReadOnlyCollection_1<T> {
     [n: number]: T;
     [Symbol.iterator](): IterableIterator<T>;
   }
 
-  interface ReadonlyArray<T> {
+  interface ReadonlyArray<T> extends Array$instance, __Array$views, IReadOnlyList_1<T>, IReadOnlyCollection_1<T>, IEnumerable_1<T> {
     readonly [n: number]: T;
     [Symbol.iterator](): IterableIterator<T>;
   }
 
   /**
    * String - augmented with BCL methods from System.String
-   * All System.String instance methods are available on string primitives.
-   * In JS mode, @tsonic/js-globals may override with JS-specific methods.
    */
-  interface String extends String$instance {}
+  interface String extends String$instance, __String$views {}
 
   /**
    * Number - augmented with BCL methods from System.Double
-   * All System.Double instance methods are available on number primitives.
    */
-  interface Number extends Double$instance {}
+  interface Number extends Double$instance, __Double$views {}
 
   /**
    * Boolean - augmented with BCL methods from System.Boolean
-   * All System.Boolean instance methods are available on boolean primitives.
    */
-  interface Boolean extends Boolean$instance {}
+  interface Boolean extends Boolean$instance, __Boolean$views {}
 
   /**
-   * Object - minimal base definition
+   * Object - augmented with BCL methods from System.Object
    */
-  interface Object {
+  interface Object extends Object$instance {
     constructor: Function;
   }
 
