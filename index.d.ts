@@ -43,6 +43,17 @@ declare global {
   }
 
   /**
+   * ArrayConstructor - allows new Array<T>(size) syntax
+   * In dotnet mode: emits as new T[size]
+   * In js mode: emits as new List<T>() with capacity
+   */
+  interface ArrayConstructor {
+    new <T>(size?: number): T[];
+  }
+
+  const Array: ArrayConstructor;
+
+  /**
    * String - augmented with BCL methods from System.String
    */
   interface String extends String$instance, __String$views {}
