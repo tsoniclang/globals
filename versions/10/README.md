@@ -2,14 +2,6 @@
 
 Global type definitions for Tsonic.
 
-## Versioning
-
-This repo is versioned by **.NET major**:
-
-- **.NET 10** → `versions/10/` → npm: `@tsonic/globals@10.x`
-
-When publishing, run: `npm publish versions/10 --access public`
-
 This package provides:
 1. **Base types** required by TypeScript (Array, String, Object, Function, etc.)
 2. **Shared types** used by both modes (utility types, iterators, Promise, Symbol)
