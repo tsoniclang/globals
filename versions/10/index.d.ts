@@ -35,7 +35,7 @@ declare global {
    *
    * C# arrays are fixed-size and do NOT have IList<T>/ICollection<T> instance methods.
    * They only support:
-   * - System.Array instance methods (length, rank, clone, copyTo, etc.)
+   * - System.Array instance methods (Length, Rank, Clone, CopyTo, etc.)
    * - IEnumerable<T> for iteration (foreach)
    * - Indexer access
    *
@@ -45,15 +45,13 @@ declare global {
   interface Array<T> extends Array$instance, __Array$views, IEnumerable_1<T> {
     [n: number]: T;
     [Symbol.iterator](): IterableIterator<T>;
-    getEnumerator(): IEnumerator_1<T>;
-    getEnumerator(): IEnumerator;
+    GetEnumerator(): IEnumerator_1<T>;
   }
 
   interface ReadonlyArray<T> extends Array$instance, __Array$views, IEnumerable_1<T> {
     readonly [n: number]: T;
     [Symbol.iterator](): IterableIterator<T>;
-    getEnumerator(): IEnumerator_1<T>;
-    getEnumerator(): IEnumerator;
+    GetEnumerator(): IEnumerator_1<T>;
   }
 
   /**

@@ -3,6 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "publish:10": "npm publish versions/10 --access public"
+    "publish:10": "npm publish ./versions/10 --access public"
   }
 }
