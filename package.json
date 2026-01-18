@@ -1,29 +1,8 @@
 {
-  "name": "@tsonic/globals",
-  "version": "0.3.11",
-  "description": "Global type definitions for Tsonic with BCL primitive methods",
-  "main": "index.d.ts",
-  "types": "index.d.ts",
+  "name": "@tsonic/globals-repo",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@tsonic/dotnet": "0.8.10"
-  },
-  "devDependencies": {
-    "typescript": "5.9.3"
-  },
-  "keywords": [
-    "tsonic",
-    "typescript",
-    "types",
-    "globals",
-    "utility-types"
-  ],
-  "author": "Tsonic Team",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tsoniclang/globals.git"
+    "publish:10": "npm publish ./versions/10 --access public"
   }
 }
