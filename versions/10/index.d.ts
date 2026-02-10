@@ -9,6 +9,9 @@
  * 3. TypeScript compiler intrinsics (utility types, iterators, Promise, Symbol)
  */
 
+// Core primitives (char, int, etc) referenced by some global surfaces (e.g. String indexer).
+import type { char } from "@tsonic/core/types.js";
+
 // BCL types from @tsonic/dotnet
 import {
   Array$instance, __Array$views,
@@ -68,7 +71,9 @@ declare global {
   /**
    * String - augmented with BCL methods from System.String
    */
-  interface String extends String$instance, __String$views {}
+  interface String extends String$instance, __String$views {
+    readonly [index: number]: char;
+  }
 
   /**
    * Number - augmented with BCL methods from System.Double
