@@ -20,8 +20,8 @@ import {
   Boolean$instance, __Boolean$views,
   Object$instance
 } from "@tsonic/dotnet/System/internal/index.js";
-import type { IEnumerator } from "@tsonic/dotnet/System.Collections/internal/index.js";
-import { IEnumerable_1, IEnumerator_1 } from "@tsonic/dotnet/System.Collections.Generic/internal/index.js";
+import type { IEnumerator } from "@tsonic/dotnet/System.Collections.js";
+import type { IEnumerable, IEnumerator as IEnumeratorT } from "@tsonic/dotnet/System.Collections.Generic.js";
 
 declare global {
   // Minimal Error surface (noLib mode).
@@ -45,16 +45,16 @@ declare global {
    * For mutable collection operations (add, remove, etc.), use List<T> instead.
    * For LINQ operations (map, filter, etc.), use Enumerable methods.
    */
-  interface Array<T> extends Array$instance, __Array$views, IEnumerable_1<T> {
+  interface Array<T> extends Array$instance, __Array$views, IEnumerable<T> {
     [n: number]: T;
     [Symbol.iterator](): IterableIterator<T>;
-    GetEnumerator(): IEnumerator_1<T>;
+    GetEnumerator(): IEnumeratorT<T>;
   }
 
-  interface ReadonlyArray<T> extends Array$instance, __Array$views, IEnumerable_1<T> {
+  interface ReadonlyArray<T> extends Array$instance, __Array$views, IEnumerable<T> {
     readonly [n: number]: T;
     [Symbol.iterator](): IterableIterator<T>;
-    GetEnumerator(): IEnumerator_1<T>;
+    GetEnumerator(): IEnumeratorT<T>;
   }
 
   /**
