@@ -1,6 +1,6 @@
 {
   "name": "@tsonic/globals",
-  "version": "10.0.31",
+  "version": "10.0.32",
   "description": "Global type definitions for Tsonic with BCL primitive methods",
   "main": "index.d.ts",
   "types": "index.d.ts",
@@ -13,7 +13,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@tsonic/dotnet": "10.0.31"
+    "@tsonic/dotnet": "10.0.32"
   },
   "devDependencies": {
     "typescript": "5.9.3"
