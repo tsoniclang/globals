@@ -6,6 +6,9 @@
   "types": "index.d.ts",
   "files": [
     "index.d.ts",
+    "core-globals.d.ts",
+    "globals.d.ts",
+    "tsonic.surface.json",
     "README.md",
     "LICENSE"
   ],
@@ -13,6 +16,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@tsonic/core": "10.0.37",
     "@tsonic/dotnet": "10.0.37"
   },
   "devDependencies": {

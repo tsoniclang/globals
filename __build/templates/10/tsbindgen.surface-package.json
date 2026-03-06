@@ -1,0 +1,1540 @@
+{
+  "schemaVersion": 1,
+  "prependReferences": [
+    {
+      "kind": "path",
+      "target": "./core-globals.d.ts"
+    },
+    {
+      "kind": "path",
+      "target": "./globals.d.ts"
+    }
+  ],
+  "declarationFiles": [
+    {
+      "path": "core-globals.d.ts",
+      "imports": [],
+      "global": {
+        "interfaces": [
+          {
+            "name": "Function",
+            "typeParameters": [],
+            "extends": [],
+            "members": [
+              {
+                "kind": "property",
+                "name": "prototype",
+                "type": "any",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "CallableFunction",
+            "typeParameters": [],
+            "extends": [
+              "Function"
+            ],
+            "members": []
+          },
+          {
+            "name": "NewableFunction",
+            "typeParameters": [],
+            "extends": [
+              "Function"
+            ],
+            "members": []
+          },
+          {
+            "name": "IArguments",
+            "typeParameters": [],
+            "extends": [],
+            "members": []
+          },
+          {
+            "name": "RegExp",
+            "typeParameters": [],
+            "extends": [],
+            "members": []
+          },
+          {
+            "name": "ImportMeta",
+            "typeParameters": [],
+            "extends": [],
+            "members": []
+          },
+          {
+            "name": "String",
+            "typeParameters": [],
+            "extends": [],
+            "members": []
+          },
+          {
+            "name": "Number",
+            "typeParameters": [],
+            "extends": [],
+            "members": []
+          },
+          {
+            "name": "Boolean",
+            "typeParameters": [],
+            "extends": [],
+            "members": []
+          },
+          {
+            "name": "Object",
+            "typeParameters": [],
+            "extends": [],
+            "members": [
+              {
+                "kind": "property",
+                "name": "constructor",
+                "type": "Function",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "SymbolConstructor",
+            "typeParameters": [],
+            "extends": [],
+            "members": [
+              {
+                "kind": "property",
+                "name": "iterator",
+                "type": "symbol",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "property",
+                "name": "asyncIterator",
+                "type": "symbol",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "property",
+                "name": "hasInstance",
+                "type": "symbol",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "property",
+                "name": "isConcatSpreadable",
+                "type": "symbol",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "property",
+                "name": "species",
+                "type": "symbol",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "property",
+                "name": "toPrimitive",
+                "type": "symbol",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "property",
+                "name": "toStringTag",
+                "type": "symbol",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "Array",
+            "typeParameters": [
+              "T"
+            ],
+            "extends": [],
+            "members": [
+              {
+                "kind": "index",
+                "name": null,
+                "type": "T",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": "n",
+                "indexParameterType": "number"
+              },
+              {
+                "kind": "property",
+                "name": "length",
+                "type": "number",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "[Symbol.iterator]",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "IterableIterator<T>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "ReadonlyArray",
+            "typeParameters": [
+              "T"
+            ],
+            "extends": [],
+            "members": [
+              {
+                "kind": "index",
+                "name": null,
+                "type": "T",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": "n",
+                "indexParameterType": "number"
+              },
+              {
+                "kind": "property",
+                "name": "length",
+                "type": "number",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "[Symbol.iterator]",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "IterableIterator<T>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "ArrayConstructor",
+            "typeParameters": [],
+            "extends": [],
+            "members": [
+              {
+                "kind": "constructSignature",
+                "name": null,
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "size",
+                    "type": "number",
+                    "optional": true,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [
+                  "T"
+                ],
+                "returnType": "T[]",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "Promise",
+            "typeParameters": [
+              "T"
+            ],
+            "extends": [],
+            "members": [
+              {
+                "kind": "method",
+                "name": "then",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "onfulfilled",
+                    "type": "| ((value: T) => TResult1 | PromiseLike<TResult1>)\n        | undefined\n        | null",
+                    "optional": true,
+                    "rest": false
+                  },
+                  {
+                    "name": "onrejected",
+                    "type": "| ((reason: any) => TResult2 | PromiseLike<TResult2>)\n        | undefined\n        | null",
+                    "optional": true,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [
+                  "TResult1 = T",
+                  "TResult2 = never"
+                ],
+                "returnType": "Promise<TResult1 | TResult2>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "catch",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "onrejected",
+                    "type": "| ((reason: any) => TResult | PromiseLike<TResult>)\n        | undefined\n        | null",
+                    "optional": true,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [
+                  "TResult = never"
+                ],
+                "returnType": "Promise<T | TResult>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "finally",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "onfinally",
+                    "type": "(() => void) | undefined | null",
+                    "optional": true,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "Promise<T>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "PromiseLike",
+            "typeParameters": [
+              "T"
+            ],
+            "extends": [],
+            "members": [
+              {
+                "kind": "method",
+                "name": "then",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "onfulfilled",
+                    "type": "| ((value: T) => TResult1 | PromiseLike<TResult1>)\n        | undefined\n        | null",
+                    "optional": true,
+                    "rest": false
+                  },
+                  {
+                    "name": "onrejected",
+                    "type": "| ((reason: any) => TResult2 | PromiseLike<TResult2>)\n        | undefined\n        | null",
+                    "optional": true,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [
+                  "TResult1 = T",
+                  "TResult2 = never"
+                ],
+                "returnType": "PromiseLike<TResult1 | TResult2>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "PromiseConstructor",
+            "typeParameters": [],
+            "extends": [],
+            "members": [
+              {
+                "kind": "constructSignature",
+                "name": null,
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "executor",
+                    "type": "(\n        resolve: (value: T | PromiseLike<T>) => void,\n        reject: (reason?: any) => void\n      ) => void",
+                    "optional": false,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [
+                  "T"
+                ],
+                "returnType": "Promise<T>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "resolve",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "Promise<void>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "resolve",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "value",
+                    "type": "T | PromiseLike<T>",
+                    "optional": false,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [
+                  "T"
+                ],
+                "returnType": "Promise<T>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "reject",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "reason",
+                    "type": "any",
+                    "optional": true,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [
+                  "T = never"
+                ],
+                "returnType": "Promise<T>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "all",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "values",
+                    "type": "readonly (T | PromiseLike<T>)[]",
+                    "optional": false,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [
+                  "T"
+                ],
+                "returnType": "Promise<T[]>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "race",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "values",
+                    "type": "readonly (T | PromiseLike<T>)[]",
+                    "optional": false,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [
+                  "T"
+                ],
+                "returnType": "Promise<T>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "Iterator",
+            "typeParameters": [
+              "T",
+              "TReturn = any",
+              "TNext = undefined"
+            ],
+            "extends": [],
+            "members": [
+              {
+                "kind": "method",
+                "name": "next",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "args",
+                    "type": "[] | [TNext]",
+                    "optional": false,
+                    "rest": true
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "IteratorResult<T, TReturn>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "return",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "value",
+                    "type": "TReturn",
+                    "optional": true,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "IteratorResult<T, TReturn>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "throw",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "e",
+                    "type": "any",
+                    "optional": true,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "IteratorResult<T, TReturn>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "IteratorResult",
+            "typeParameters": [
+              "T",
+              "TReturn = any"
+            ],
+            "extends": [],
+            "members": [
+              {
+                "kind": "property",
+                "name": "done",
+                "type": "boolean",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "property",
+                "name": "value",
+                "type": "T | TReturn",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "IteratorYieldResult",
+            "typeParameters": [
+              "T"
+            ],
+            "extends": [],
+            "members": [
+              {
+                "kind": "property",
+                "name": "done",
+                "type": "false",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "property",
+                "name": "value",
+                "type": "T",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "IteratorReturnResult",
+            "typeParameters": [
+              "TReturn"
+            ],
+            "extends": [],
+            "members": [
+              {
+                "kind": "property",
+                "name": "done",
+                "type": "true",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "property",
+                "name": "value",
+                "type": "TReturn",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "Iterable",
+            "typeParameters": [
+              "T",
+              "TReturn = any",
+              "TNext = undefined"
+            ],
+            "extends": [],
+            "members": [
+              {
+                "kind": "method",
+                "name": "[Symbol.iterator]",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "Iterator<T, TReturn, TNext>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "IterableIterator",
+            "typeParameters": [
+              "T",
+              "TReturn = any",
+              "TNext = undefined"
+            ],
+            "extends": [
+              "Iterator<T, TReturn, TNext>"
+            ],
+            "members": [
+              {
+                "kind": "method",
+                "name": "[Symbol.iterator]",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "IterableIterator<T, TReturn, TNext>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "AsyncIterator",
+            "typeParameters": [
+              "T",
+              "TReturn = any",
+              "TNext = undefined"
+            ],
+            "extends": [],
+            "members": [
+              {
+                "kind": "method",
+                "name": "next",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "args",
+                    "type": "[] | [TNext]",
+                    "optional": false,
+                    "rest": true
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "Promise<IteratorResult<T, TReturn>>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "return",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "value",
+                    "type": "TReturn | PromiseLike<TReturn>",
+                    "optional": true,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "Promise<IteratorResult<T, TReturn>>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "throw",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "e",
+                    "type": "any",
+                    "optional": true,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "Promise<IteratorResult<T, TReturn>>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "AsyncIterable",
+            "typeParameters": [
+              "T",
+              "TReturn = any",
+              "TNext = undefined"
+            ],
+            "extends": [],
+            "members": [
+              {
+                "kind": "method",
+                "name": "[Symbol.asyncIterator]",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "AsyncIterator<T, TReturn, TNext>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "AsyncIterableIterator",
+            "typeParameters": [
+              "T",
+              "TReturn = any",
+              "TNext = undefined"
+            ],
+            "extends": [
+              "AsyncIterator<T, TReturn, TNext>"
+            ],
+            "members": [
+              {
+                "kind": "method",
+                "name": "[Symbol.asyncIterator]",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "AsyncIterableIterator<T, TReturn, TNext>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "Generator",
+            "typeParameters": [
+              "T = unknown",
+              "TReturn = any",
+              "TNext = unknown"
+            ],
+            "extends": [
+              "Iterator<T, TReturn, TNext>"
+            ],
+            "members": [
+              {
+                "kind": "method",
+                "name": "next",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "args",
+                    "type": "[] | [TNext]",
+                    "optional": false,
+                    "rest": true
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "IteratorResult<T, TReturn>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "return",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "value",
+                    "type": "TReturn",
+                    "optional": false,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "IteratorResult<T, TReturn>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "throw",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "e",
+                    "type": "any",
+                    "optional": false,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "IteratorResult<T, TReturn>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "[Symbol.iterator]",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "Generator<T, TReturn, TNext>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "AsyncGenerator",
+            "typeParameters": [
+              "T = unknown",
+              "TReturn = any",
+              "TNext = unknown"
+            ],
+            "extends": [
+              "AsyncIterator<T, TReturn, TNext>"
+            ],
+            "members": [
+              {
+                "kind": "method",
+                "name": "next",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "args",
+                    "type": "[] | [TNext]",
+                    "optional": false,
+                    "rest": true
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "Promise<IteratorResult<T, TReturn>>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "return",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "value",
+                    "type": "TReturn | PromiseLike<TReturn>",
+                    "optional": false,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "Promise<IteratorResult<T, TReturn>>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "throw",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "e",
+                    "type": "any",
+                    "optional": false,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": "Promise<IteratorResult<T, TReturn>>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "[Symbol.asyncIterator]",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "AsyncGenerator<T, TReturn, TNext>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "TemplateStringsArray",
+            "typeParameters": [],
+            "extends": [
+              "ReadonlyArray<string>"
+            ],
+            "members": [
+              {
+                "kind": "property",
+                "name": "raw",
+                "type": "readonly string[]",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          }
+        ],
+        "typeAliases": [
+          {
+            "name": "PropertyKey",
+            "typeParameters": [],
+            "type": "string | number | symbol"
+          },
+          {
+            "name": "Partial",
+            "typeParameters": [
+              "T"
+            ],
+            "type": "{ [P in keyof T]?: T[P] }"
+          },
+          {
+            "name": "Required",
+            "typeParameters": [
+              "T"
+            ],
+            "type": "{ [P in keyof T]-?: T[P] }"
+          },
+          {
+            "name": "Readonly",
+            "typeParameters": [
+              "T"
+            ],
+            "type": "{ readonly [P in keyof T]: T[P] }"
+          },
+          {
+            "name": "Pick",
+            "typeParameters": [
+              "T",
+              "K extends keyof T"
+            ],
+            "type": "{ [P in K]: T[P] }"
+          },
+          {
+            "name": "Record",
+            "typeParameters": [
+              "K extends keyof any",
+              "T"
+            ],
+            "type": "{ [P in K]: T }"
+          },
+          {
+            "name": "Exclude",
+            "typeParameters": [
+              "T",
+              "U"
+            ],
+            "type": "T extends U ? never : T"
+          },
+          {
+            "name": "Extract",
+            "typeParameters": [
+              "T",
+              "U"
+            ],
+            "type": "T extends U ? T : never"
+          },
+          {
+            "name": "Omit",
+            "typeParameters": [
+              "T",
+              "K extends keyof any"
+            ],
+            "type": "Pick<T, Exclude<keyof T, K>>"
+          },
+          {
+            "name": "NonNullable",
+            "typeParameters": [
+              "T"
+            ],
+            "type": "T extends null | undefined ? never : T"
+          },
+          {
+            "name": "Parameters",
+            "typeParameters": [
+              "T extends (...args: any) => any"
+            ],
+            "type": "T extends (...args: infer P) => any ? P : never"
+          },
+          {
+            "name": "ConstructorParameters",
+            "typeParameters": [
+              "T extends new (...args: any) => any"
+            ],
+            "type": "T extends new (...args: infer P) => any ? P : never"
+          },
+          {
+            "name": "ReturnType",
+            "typeParameters": [
+              "T extends (...args: any) => any"
+            ],
+            "type": "T extends (...args: any) => infer R ? R : any"
+          },
+          {
+            "name": "InstanceType",
+            "typeParameters": [
+              "T extends new (...args: any) => any"
+            ],
+            "type": "T extends new (...args: any) => infer R ? R : any"
+          },
+          {
+            "name": "Awaited",
+            "typeParameters": [
+              "T"
+            ],
+            "type": "T extends PromiseLike<infer U> ? Awaited<U> : T"
+          },
+          {
+            "name": "Uppercase",
+            "typeParameters": [
+              "S extends string"
+            ],
+            "type": "intrinsic"
+          },
+          {
+            "name": "Lowercase",
+            "typeParameters": [
+              "S extends string"
+            ],
+            "type": "intrinsic"
+          },
+          {
+            "name": "Capitalize",
+            "typeParameters": [
+              "S extends string"
+            ],
+            "type": "intrinsic"
+          },
+          {
+            "name": "Uncapitalize",
+            "typeParameters": [
+              "S extends string"
+            ],
+            "type": "intrinsic"
+          }
+        ],
+        "consts": [
+          {
+            "name": "Symbol",
+            "type": "SymbolConstructor"
+          },
+          {
+            "name": "Array",
+            "type": "ArrayConstructor"
+          },
+          {
+            "name": "Promise",
+            "type": "PromiseConstructor"
+          }
+        ],
+        "functions": [],
+        "classes": [
+          {
+            "name": "Error",
+            "typeParameters": [],
+            "extends": null,
+            "members": [
+              {
+                "kind": "property",
+                "name": "name",
+                "type": "string",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "property",
+                "name": "message",
+                "type": "string",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "property",
+                "name": "stack",
+                "type": "string",
+                "readonly": false,
+                "optional": true,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "constructor",
+                "name": null,
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [
+                  {
+                    "name": "message",
+                    "type": "string",
+                    "optional": true,
+                    "rest": false
+                  }
+                ],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          }
+        ]
+      },
+      "modules": [],
+      "statements": [],
+      "exportEmpty": true
+    },
+    {
+      "path": "globals.d.ts",
+      "imports": [
+        {
+          "from": "@tsonic/core/types.js",
+          "typeOnly": true,
+          "namespace": null,
+          "named": [
+            {
+              "name": "char",
+              "alias": null
+            }
+          ]
+        },
+        {
+          "from": "@tsonic/dotnet/System/internal/index.js",
+          "typeOnly": false,
+          "namespace": null,
+          "named": [
+            {
+              "name": "Array$instance",
+              "alias": null
+            },
+            {
+              "name": "__Array$views",
+              "alias": null
+            },
+            {
+              "name": "String$instance",
+              "alias": null
+            },
+            {
+              "name": "__String$views",
+              "alias": null
+            },
+            {
+              "name": "Double$instance",
+              "alias": null
+            },
+            {
+              "name": "__Double$views",
+              "alias": null
+            },
+            {
+              "name": "Boolean$instance",
+              "alias": null
+            },
+            {
+              "name": "__Boolean$views",
+              "alias": null
+            },
+            {
+              "name": "Object$instance",
+              "alias": null
+            }
+          ]
+        },
+        {
+          "from": "@tsonic/dotnet/System.Collections.Generic.js",
+          "typeOnly": true,
+          "namespace": null,
+          "named": [
+            {
+              "name": "IEnumerable",
+              "alias": null
+            },
+            {
+              "name": "IEnumerator",
+              "alias": "IEnumeratorT"
+            }
+          ]
+        }
+      ],
+      "global": {
+        "interfaces": [
+          {
+            "name": "Array",
+            "typeParameters": [
+              "T"
+            ],
+            "extends": [
+              "Array$instance",
+              "__Array$views",
+              "IEnumerable<T>"
+            ],
+            "members": [
+              {
+                "kind": "index",
+                "name": null,
+                "type": "T",
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": "n",
+                "indexParameterType": "number"
+              },
+              {
+                "kind": "method",
+                "name": "[Symbol.iterator]",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "IterableIterator<T>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "GetEnumerator",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "IEnumeratorT<T>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "ReadonlyArray",
+            "typeParameters": [
+              "T"
+            ],
+            "extends": [
+              "Array$instance",
+              "__Array$views",
+              "IEnumerable<T>"
+            ],
+            "members": [
+              {
+                "kind": "index",
+                "name": null,
+                "type": "T",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": "n",
+                "indexParameterType": "number"
+              },
+              {
+                "kind": "method",
+                "name": "[Symbol.iterator]",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "IterableIterator<T>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              },
+              {
+                "kind": "method",
+                "name": "GetEnumerator",
+                "type": null,
+                "readonly": false,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": "IEnumeratorT<T>",
+                "indexParameterName": null,
+                "indexParameterType": null
+              }
+            ]
+          },
+          {
+            "name": "String",
+            "typeParameters": [],
+            "extends": [
+              "String$instance",
+              "__String$views"
+            ],
+            "members": [
+              {
+                "kind": "index",
+                "name": null,
+                "type": "char",
+                "readonly": true,
+                "optional": false,
+                "parameters": [],
+                "typeParameters": [],
+                "returnType": null,
+                "indexParameterName": "index",
+                "indexParameterType": "number"
+              }
+            ]
+          },
+          {
+            "name": "Number",
+            "typeParameters": [],
+            "extends": [
+              "Double$instance",
+              "__Double$views"
+            ],
+            "members": []
+          },
+          {
+            "name": "Boolean",
+            "typeParameters": [],
+            "extends": [
+              "Boolean$instance",
+              "__Boolean$views"
+            ],
+            "members": []
+          },
+          {
+            "name": "Object",
+            "typeParameters": [],
+            "extends": [
+              "Object$instance"
+            ],
+            "members": []
+          }
+        ],
+        "typeAliases": [],
+        "consts": [],
+        "classes": []
+      },
+      "modules": [],
+      "statements": [],
+      "exportEmpty": true
+    }
+  ],
+  "surfaceManifest": {
+    "schemaVersion": 1,
+    "id": "clr",
+    "extends": [],
+    "requiredTypeRoots": [
+      "."
+    ],
+    "requiredNpmPackages": [
+      "@tsonic/globals",
+      "@tsonic/dotnet"
+    ],
+    "useStandardLib": false
+  }
+}
