@@ -16,8 +16,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@tsonic/core": "10.0.37",
-    "@tsonic/dotnet": "10.0.37"
+    "@tsonic/core": "10.0.38",
+    "@tsonic/dotnet": "10.0.38"
   },
   "devDependencies": {
     "typescript": "5.9.3"
