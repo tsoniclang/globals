@@ -1,4 +1,4 @@
-/// <reference path="./core-globals.d.ts" />
-/// <reference path="./globals.d.ts" />
+import "./core-globals.js";
+import "./globals.js";
 
 export {};
