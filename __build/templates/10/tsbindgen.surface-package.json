@@ -1534,7 +1534,6 @@
     "requiredNpmPackages": [
       "@tsonic/globals",
       "@tsonic/dotnet"
-    ],
-    "useStandardLib": false
+    ]
   }
 }
