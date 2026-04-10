@@ -10,9 +10,9 @@ This repo is versioned by **.NET major**:
 
 When publishing, run: `npm publish versions/10 --access public`
 
-This package provides:
+This package provides the CLR/default-surface global type layer:
 1. **Base types** required by TypeScript (Array, String, Object, Function, etc.)
-2. **Shared types** used by both modes (utility types, iterators, Promise, Symbol)
+2. **Shared types** used by the CLR/default surface (utility types, iterators, Promise, Symbol)
 
 ## Usage
 
@@ -33,25 +33,17 @@ npm install @tsonic/globals
 
 Arrays use LINQ, strings use BCL methods.
 
-### JS mode (use with @tsonic/js-globals)
+### JS surface
+
+Do not layer `@tsonic/globals` and `@tsonic/js-globals` manually for JS projects.
+
+Use the first-party JS surface directly:
 
 ```bash
-npm install @tsonic/globals @tsonic/js-globals
+npx --yes tsonic@latest init --surface @tsonic/js
 ```
 
-```json
-{
-  "compilerOptions": {
-    "noLib": true,
-    "typeRoots": [
-      "node_modules/@tsonic/globals",
-      "node_modules/@tsonic/js-globals"
-    ]
-  }
-}
-```
-
-Arrays have `.map`, `.filter`, `.length`, etc. Strings have `.slice`, `.indexOf`, etc.
+`@tsonic/js` provides its own surface and ambient globals. `@tsonic/js-globals` is retired.
 
 ## What's included
 
