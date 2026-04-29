@@ -20,20 +20,7 @@
             "name": "Function",
             "typeParameters": [],
             "extends": [],
-            "members": [
-              {
-                "kind": "property",
-                "name": "prototype",
-                "type": "any",
-                "readonly": false,
-                "optional": false,
-                "parameters": [],
-                "typeParameters": [],
-                "returnType": null,
-                "indexParameterName": null,
-                "indexParameterType": null
-              }
-            ]
+            "members": []
           },
           {
             "name": "CallableFunction",
@@ -91,20 +78,7 @@
             "name": "Object",
             "typeParameters": [],
             "extends": [],
-            "members": [
-              {
-                "kind": "property",
-                "name": "constructor",
-                "type": "Function",
-                "readonly": false,
-                "optional": false,
-                "parameters": [],
-                "typeParameters": [],
-                "returnType": null,
-                "indexParameterName": null,
-                "indexParameterType": null
-              }
-            ]
+            "members": []
           },
           {
             "name": "SymbolConstructor",
@@ -134,66 +108,6 @@
                 "returnType": null,
                 "indexParameterName": null,
                 "indexParameterType": null
-              },
-              {
-                "kind": "property",
-                "name": "hasInstance",
-                "type": "symbol",
-                "readonly": true,
-                "optional": false,
-                "parameters": [],
-                "typeParameters": [],
-                "returnType": null,
-                "indexParameterName": null,
-                "indexParameterType": null
-              },
-              {
-                "kind": "property",
-                "name": "isConcatSpreadable",
-                "type": "symbol",
-                "readonly": true,
-                "optional": false,
-                "parameters": [],
-                "typeParameters": [],
-                "returnType": null,
-                "indexParameterName": null,
-                "indexParameterType": null
-              },
-              {
-                "kind": "property",
-                "name": "species",
-                "type": "symbol",
-                "readonly": true,
-                "optional": false,
-                "parameters": [],
-                "typeParameters": [],
-                "returnType": null,
-                "indexParameterName": null,
-                "indexParameterType": null
-              },
-              {
-                "kind": "property",
-                "name": "toPrimitive",
-                "type": "symbol",
-                "readonly": true,
-                "optional": false,
-                "parameters": [],
-                "typeParameters": [],
-                "returnType": null,
-                "indexParameterName": null,
-                "indexParameterType": null
-              },
-              {
-                "kind": "property",
-                "name": "toStringTag",
-                "type": "symbol",
-                "readonly": true,
-                "optional": false,
-                "parameters": [],
-                "typeParameters": [],
-                "returnType": null,
-                "indexParameterName": null,
-                "indexParameterType": null
               }
             ]
           },
@@ -215,18 +129,6 @@
                 "returnType": null,
                 "indexParameterName": "n",
                 "indexParameterType": "number"
-              },
-              {
-                "kind": "property",
-                "name": "length",
-                "type": "number",
-                "readonly": true,
-                "optional": false,
-                "parameters": [],
-                "typeParameters": [],
-                "returnType": null,
-                "indexParameterName": null,
-                "indexParameterType": null
               },
               {
                 "kind": "method",
@@ -262,18 +164,6 @@
                 "indexParameterType": "number"
               },
               {
-                "kind": "property",
-                "name": "length",
-                "type": "number",
-                "readonly": true,
-                "optional": false,
-                "parameters": [],
-                "typeParameters": [],
-                "returnType": null,
-                "indexParameterName": null,
-                "indexParameterType": null
-              },
-              {
                 "kind": "method",
                 "name": "[Symbol.iterator]",
                 "type": null,
@@ -282,34 +172,6 @@
                 "parameters": [],
                 "typeParameters": [],
                 "returnType": "IterableIterator<T>",
-                "indexParameterName": null,
-                "indexParameterType": null
-              }
-            ]
-          },
-          {
-            "name": "ArrayConstructor",
-            "typeParameters": [],
-            "extends": [],
-            "members": [
-              {
-                "kind": "constructSignature",
-                "name": null,
-                "type": null,
-                "readonly": false,
-                "optional": false,
-                "parameters": [
-                  {
-                    "name": "size",
-                    "type": "number",
-                    "optional": true,
-                    "rest": false
-                  }
-                ],
-                "typeParameters": [
-                  "T"
-                ],
-                "returnType": "T[]",
                 "indexParameterName": null,
                 "indexParameterType": null
               }
@@ -337,7 +199,7 @@
                   },
                   {
                     "name": "onrejected",
-                    "type": "| ((reason: any) => TResult2 | PromiseLike<TResult2>)\n        | undefined\n        | null",
+                    "type": "| ((reason: unknown) => TResult2 | PromiseLike<TResult2>)\n        | undefined\n        | null",
                     "optional": true,
                     "rest": false
                   }
@@ -359,7 +221,7 @@
                 "parameters": [
                   {
                     "name": "onrejected",
-                    "type": "| ((reason: any) => TResult | PromiseLike<TResult>)\n        | undefined\n        | null",
+                    "type": "| ((reason: unknown) => TResult | PromiseLike<TResult>)\n        | undefined\n        | null",
                     "optional": true,
                     "rest": false
                   }
@@ -414,7 +276,7 @@
                   },
                   {
                     "name": "onrejected",
-                    "type": "| ((reason: any) => TResult2 | PromiseLike<TResult2>)\n        | undefined\n        | null",
+                    "type": "| ((reason: unknown) => TResult2 | PromiseLike<TResult2>)\n        | undefined\n        | null",
                     "optional": true,
                     "rest": false
                   }
@@ -443,103 +305,7 @@
                 "parameters": [
                   {
                     "name": "executor",
-                    "type": "(\n        resolve: (value: T | PromiseLike<T>) => void,\n        reject: (reason?: any) => void\n      ) => void",
-                    "optional": false,
-                    "rest": false
-                  }
-                ],
-                "typeParameters": [
-                  "T"
-                ],
-                "returnType": "Promise<T>",
-                "indexParameterName": null,
-                "indexParameterType": null
-              },
-              {
-                "kind": "method",
-                "name": "resolve",
-                "type": null,
-                "readonly": false,
-                "optional": false,
-                "parameters": [],
-                "typeParameters": [],
-                "returnType": "Promise<void>",
-                "indexParameterName": null,
-                "indexParameterType": null
-              },
-              {
-                "kind": "method",
-                "name": "resolve",
-                "type": null,
-                "readonly": false,
-                "optional": false,
-                "parameters": [
-                  {
-                    "name": "value",
-                    "type": "T | PromiseLike<T>",
-                    "optional": false,
-                    "rest": false
-                  }
-                ],
-                "typeParameters": [
-                  "T"
-                ],
-                "returnType": "Promise<T>",
-                "indexParameterName": null,
-                "indexParameterType": null
-              },
-              {
-                "kind": "method",
-                "name": "reject",
-                "type": null,
-                "readonly": false,
-                "optional": false,
-                "parameters": [
-                  {
-                    "name": "reason",
-                    "type": "any",
-                    "optional": true,
-                    "rest": false
-                  }
-                ],
-                "typeParameters": [
-                  "T = never"
-                ],
-                "returnType": "Promise<T>",
-                "indexParameterName": null,
-                "indexParameterType": null
-              },
-              {
-                "kind": "method",
-                "name": "all",
-                "type": null,
-                "readonly": false,
-                "optional": false,
-                "parameters": [
-                  {
-                    "name": "values",
-                    "type": "readonly (T | PromiseLike<T>)[]",
-                    "optional": false,
-                    "rest": false
-                  }
-                ],
-                "typeParameters": [
-                  "T"
-                ],
-                "returnType": "Promise<T[]>",
-                "indexParameterName": null,
-                "indexParameterType": null
-              },
-              {
-                "kind": "method",
-                "name": "race",
-                "type": null,
-                "readonly": false,
-                "optional": false,
-                "parameters": [
-                  {
-                    "name": "values",
-                    "type": "readonly (T | PromiseLike<T>)[]",
+                    "type": "(\n        resolve: (value: T | PromiseLike<T>) => void,\n        reject: (reason?: unknown) => void\n      ) => void",
                     "optional": false,
                     "rest": false
                   }
@@ -557,8 +323,8 @@
             "name": "Iterator",
             "typeParameters": [
               "T",
-              "TReturn = any",
-              "TNext = undefined"
+              "TReturn = unknown",
+              "TNext = unknown"
             ],
             "extends": [],
             "members": [
@@ -609,7 +375,7 @@
                 "parameters": [
                   {
                     "name": "e",
-                    "type": "any",
+                    "type": "unknown",
                     "optional": true,
                     "rest": false
                   }
@@ -625,7 +391,7 @@
             "name": "IteratorResult",
             "typeParameters": [
               "T",
-              "TReturn = any"
+              "TReturn = unknown"
             ],
             "extends": [],
             "members": [
@@ -725,8 +491,8 @@
             "name": "Iterable",
             "typeParameters": [
               "T",
-              "TReturn = any",
-              "TNext = undefined"
+              "TReturn = unknown",
+              "TNext = unknown"
             ],
             "extends": [],
             "members": [
@@ -748,8 +514,8 @@
             "name": "IterableIterator",
             "typeParameters": [
               "T",
-              "TReturn = any",
-              "TNext = undefined"
+              "TReturn = unknown",
+              "TNext = unknown"
             ],
             "extends": [
               "Iterator<T, TReturn, TNext>"
@@ -773,8 +539,8 @@
             "name": "AsyncIterator",
             "typeParameters": [
               "T",
-              "TReturn = any",
-              "TNext = undefined"
+              "TReturn = unknown",
+              "TNext = unknown"
             ],
             "extends": [],
             "members": [
@@ -825,7 +591,7 @@
                 "parameters": [
                   {
                     "name": "e",
-                    "type": "any",
+                    "type": "unknown",
                     "optional": true,
                     "rest": false
                   }
@@ -841,8 +607,8 @@
             "name": "AsyncIterable",
             "typeParameters": [
               "T",
-              "TReturn = any",
-              "TNext = undefined"
+              "TReturn = unknown",
+              "TNext = unknown"
             ],
             "extends": [],
             "members": [
@@ -864,8 +630,8 @@
             "name": "AsyncIterableIterator",
             "typeParameters": [
               "T",
-              "TReturn = any",
-              "TNext = undefined"
+              "TReturn = unknown",
+              "TNext = unknown"
             ],
             "extends": [
               "AsyncIterator<T, TReturn, TNext>"
@@ -889,7 +655,7 @@
             "name": "Generator",
             "typeParameters": [
               "T = unknown",
-              "TReturn = any",
+              "TReturn = unknown",
               "TNext = unknown"
             ],
             "extends": [
@@ -943,7 +709,7 @@
                 "parameters": [
                   {
                     "name": "e",
-                    "type": "any",
+                    "type": "unknown",
                     "optional": false,
                     "rest": false
                   }
@@ -971,7 +737,7 @@
             "name": "AsyncGenerator",
             "typeParameters": [
               "T = unknown",
-              "TReturn = any",
+              "TReturn = unknown",
               "TNext = unknown"
             ],
             "extends": [
@@ -1025,7 +791,7 @@
                 "parameters": [
                   {
                     "name": "e",
-                    "type": "any",
+                    "type": "unknown",
                     "optional": false,
                     "rest": false
                   }
@@ -1109,7 +875,7 @@
           {
             "name": "Record",
             "typeParameters": [
-              "K extends keyof any",
+              "K extends PropertyKey",
               "T"
             ],
             "type": "{ [P in K]: T }"
@@ -1134,7 +900,7 @@
             "name": "Omit",
             "typeParameters": [
               "T",
-              "K extends keyof any"
+              "K extends PropertyKey"
             ],
             "type": "Pick<T, Exclude<keyof T, K>>"
           },
@@ -1148,30 +914,30 @@
           {
             "name": "Parameters",
             "typeParameters": [
-              "T extends (...args: any) => any"
+              "T extends (...args: never[]) => unknown"
             ],
-            "type": "T extends (...args: infer P) => any ? P : never"
+            "type": "T extends (...args: infer P) => unknown ? P : never"
           },
           {
             "name": "ConstructorParameters",
             "typeParameters": [
-              "T extends new (...args: any) => any"
+              "T extends new (...args: never[]) => object"
             ],
-            "type": "T extends new (...args: infer P) => any ? P : never"
+            "type": "T extends new (...args: infer P) => object ? P : never"
           },
           {
             "name": "ReturnType",
             "typeParameters": [
-              "T extends (...args: any) => any"
+              "T extends (...args: never[]) => unknown"
             ],
-            "type": "T extends (...args: any) => infer R ? R : any"
+            "type": "T extends (...args: never[]) => infer R ? R : never"
           },
           {
             "name": "InstanceType",
             "typeParameters": [
-              "T extends new (...args: any) => any"
+              "T extends new (...args: never[]) => object"
             ],
-            "type": "T extends new (...args: any) => infer R ? R : any"
+            "type": "T extends new (...args: never[]) => infer R ? R : never"
           },
           {
             "name": "Awaited",
@@ -1213,10 +979,6 @@
           {
             "name": "Symbol",
             "type": "SymbolConstructor"
-          },
-          {
-            "name": "Array",
-            "type": "ArrayConstructor"
           },
           {
             "name": "Promise",
