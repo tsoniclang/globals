@@ -14,6 +14,9 @@ This package provides the CLR/default-surface global type layer:
 1. **Base types** required by TypeScript (Array, String, Object, Function, etc.)
 2. **Shared types** used by the CLR/default surface (utility types, iterators, Promise, Symbol)
 
+`@tsonic/globals` is declaration-only. It does not ship runtime JavaScript
+helpers and does not define the active workspace surface by itself.
+
 ## Usage
 
 ### Dotnet mode (use this package alone)
