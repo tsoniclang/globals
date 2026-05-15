@@ -1,5 +1,3 @@
-import type { JsValue } from "@tsonic/core/types.js";
-
 declare global {
   class Error {
     name: string;
@@ -9,7 +7,6 @@ declare global {
   }
 
   interface Function {
-    prototype: object;
   }
 
   interface CallableFunction extends Function {
@@ -37,43 +34,30 @@ declare global {
   }
 
   interface Object {
-    constructor: Function;
   }
 
   interface SymbolConstructor {
-    (description?: Exclude<JsValue, symbol>): symbol;
     readonly iterator: symbol;
     readonly asyncIterator: symbol;
-    readonly hasInstance: symbol;
-    readonly isConcatSpreadable: symbol;
-    readonly species: symbol;
-    readonly toPrimitive: symbol;
-    readonly toStringTag: symbol;
   }
 
   interface Array<T> {
     [n: number]: T;
-    readonly length: number;
     [Symbol.iterator](): IterableIterator<T>;
   }
 
   interface ReadonlyArray<T> {
     readonly [n: number]: T;
-    readonly length: number;
     [Symbol.iterator](): IterableIterator<T>;
-  }
-
-  interface ArrayConstructor {
-    new<T>(size?: number): T[];
   }
 
   interface Promise<T> {
     then<TResult1 = T, TResult2 = never>(onfulfilled?: | ((value: T) => TResult1 | PromiseLike<TResult1>)
         | undefined
-        | null, onrejected?: | ((reason: JsValue) => TResult2 | PromiseLike<TResult2>)
+        | null, onrejected?: | ((reason: unknown) => TResult2 | PromiseLike<TResult2>)
         | undefined
         | null): Promise<TResult1 | TResult2>;
-    catch<TResult = never>(onrejected?: | ((reason: JsValue) => TResult | PromiseLike<TResult>)
+    catch<TResult = never>(onrejected?: | ((reason: unknown) => TResult | PromiseLike<TResult>)
         | undefined
         | null): Promise<T | TResult>;
     finally(onfinally?: (() => void) | undefined | null): Promise<T>;
@@ -82,7 +66,7 @@ declare global {
   interface PromiseLike<T> {
     then<TResult1 = T, TResult2 = never>(onfulfilled?: | ((value: T) => TResult1 | PromiseLike<TResult1>)
         | undefined
-        | null, onrejected?: | ((reason: JsValue) => TResult2 | PromiseLike<TResult2>)
+        | null, onrejected?: | ((reason: unknown) => TResult2 | PromiseLike<TResult2>)
         | undefined
         | null): PromiseLike<TResult1 | TResult2>;
   }
@@ -90,22 +74,17 @@ declare global {
   interface PromiseConstructor {
     new<T>(executor: (
         resolve: (value: T | PromiseLike<T>) => void,
-        reject: (reason?: JsValue) => void
+        reject: (reason?: unknown) => void
       ) => void): Promise<T>;
-    resolve(): Promise<void>;
-    resolve<T>(value: T | PromiseLike<T>): Promise<T>;
-    reject<T = never>(reason?: JsValue): Promise<T>;
-    all<T>(values: readonly (T | PromiseLike<T>)[]): Promise<T[]>;
-    race<T>(values: readonly (T | PromiseLike<T>)[]): Promise<T>;
   }
 
-  interface Iterator<T, TReturn = JsValue, TNext = JsValue> {
+  interface Iterator<T, TReturn = unknown, TNext = unknown> {
     next(...args: [] | [TNext]): IteratorResult<T, TReturn>;
     return(value?: TReturn): IteratorResult<T, TReturn>;
-    throw(e?: JsValue): IteratorResult<T, TReturn>;
+    throw(e?: unknown): IteratorResult<T, TReturn>;
   }
 
-  interface IteratorResult<T, TReturn = JsValue> {
+  interface IteratorResult<T, TReturn = unknown> {
     done: boolean;
     value: T | TReturn;
   }
@@ -120,39 +99,39 @@ declare global {
     value: TReturn;
   }
 
-  interface Iterable<T, TReturn = JsValue, TNext = JsValue> {
+  interface Iterable<T, TReturn = unknown, TNext = unknown> {
     [Symbol.iterator](): Iterator<T, TReturn, TNext>;
   }
 
-  interface IterableIterator<T, TReturn = JsValue, TNext = JsValue> extends Iterator<T, TReturn, TNext> {
+  interface IterableIterator<T, TReturn = unknown, TNext = unknown> extends Iterator<T, TReturn, TNext> {
     [Symbol.iterator](): IterableIterator<T, TReturn, TNext>;
   }
 
-  interface AsyncIterator<T, TReturn = JsValue, TNext = JsValue> {
+  interface AsyncIterator<T, TReturn = unknown, TNext = unknown> {
     next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>;
     return(value?: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TReturn>>;
-    throw(e?: JsValue): Promise<IteratorResult<T, TReturn>>;
+    throw(e?: unknown): Promise<IteratorResult<T, TReturn>>;
   }
 
-  interface AsyncIterable<T, TReturn = JsValue, TNext = JsValue> {
+  interface AsyncIterable<T, TReturn = unknown, TNext = unknown> {
     [Symbol.asyncIterator](): AsyncIterator<T, TReturn, TNext>;
   }
 
-  interface AsyncIterableIterator<T, TReturn = JsValue, TNext = JsValue> extends AsyncIterator<T, TReturn, TNext> {
+  interface AsyncIterableIterator<T, TReturn = unknown, TNext = unknown> extends AsyncIterator<T, TReturn, TNext> {
     [Symbol.asyncIterator](): AsyncIterableIterator<T, TReturn, TNext>;
   }
 
-  interface Generator<T = JsValue, TReturn = JsValue, TNext = JsValue> extends Iterator<T, TReturn, TNext> {
+  interface Generator<T = unknown, TReturn = unknown, TNext = unknown> extends Iterator<T, TReturn, TNext> {
     next(...args: [] | [TNext]): IteratorResult<T, TReturn>;
     return(value: TReturn): IteratorResult<T, TReturn>;
-    throw(e: JsValue): IteratorResult<T, TReturn>;
+    throw(e: unknown): IteratorResult<T, TReturn>;
     [Symbol.iterator](): Generator<T, TReturn, TNext>;
   }
 
-  interface AsyncGenerator<T = JsValue, TReturn = JsValue, TNext = JsValue> extends AsyncIterator<T, TReturn, TNext> {
+  interface AsyncGenerator<T = unknown, TReturn = unknown, TNext = unknown> extends AsyncIterator<T, TReturn, TNext> {
     next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>;
     return(value: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TReturn>>;
-    throw(e: JsValue): Promise<IteratorResult<T, TReturn>>;
+    throw(e: unknown): Promise<IteratorResult<T, TReturn>>;
     [Symbol.asyncIterator](): AsyncGenerator<T, TReturn, TNext>;
   }
 
@@ -180,11 +159,11 @@ declare global {
 
   type NonNullable<T> = T extends null | undefined ? never : T;
 
-  type Parameters<T extends (...args: never[]) => JsValue | undefined> = T extends (...args: infer P) => JsValue | undefined ? P : never;
+  type Parameters<T extends (...args: never[]) => unknown> = T extends (...args: infer P) => unknown ? P : never;
 
   type ConstructorParameters<T extends new (...args: never[]) => object> = T extends new (...args: infer P) => object ? P : never;
 
-  type ReturnType<T extends (...args: never[]) => JsValue | undefined> = T extends (...args: never[]) => infer R ? R : never;
+  type ReturnType<T extends (...args: never[]) => unknown> = T extends (...args: never[]) => infer R ? R : never;
 
   type InstanceType<T extends new (...args: never[]) => object> = T extends new (...args: never[]) => infer R ? R : never;
 
@@ -199,8 +178,6 @@ declare global {
   type Uncapitalize<S extends string> = intrinsic;
 
   const Symbol: SymbolConstructor;
-
-  const Array: ArrayConstructor;
 
   const Promise: PromiseConstructor;
 }
