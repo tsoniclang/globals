@@ -1,6 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "clr",
+  "supportedTargets": [
+    "csharp"
+  ],
   "extends": [],
   "requiredTypeRoots": [
     "."
