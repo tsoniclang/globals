@@ -16,6 +16,8 @@ declare global {
   }
 
   interface IArguments {
+    readonly length: number;
+    [index: number]: unknown;
   }
 
   interface RegExp {
