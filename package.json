@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "generate:10": "./__build/scripts/generate.sh 10",
+    "generate:10": "echo \"@tsonic/globals is source-authored; no generation step\"",
     "publish:10": "npm publish ./versions/10 --access public"
-  }
+  },
+  "description": "Repo for @tsonic/globals target-neutral global declarations"
 }
