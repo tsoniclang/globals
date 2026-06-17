@@ -1,10 +1,37 @@
 {
-  "name": "@tsonic/globals-repo",
-  "private": true,
-  "type": "module",
+  "name": "@tsonic/globals",
+  "version": "10.0.46",
+  "description": "Target-neutral minimal global type definitions for Tsonic",
+  "main": "index.d.ts",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "core-globals.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "generate:10": "echo \"@tsonic/globals is source-authored; no generation step\"",
-    "publish:10": "npm publish ./versions/10 --access public"
+    "generate": "echo \"@tsonic/globals is source-authored; no generation step\"",
+    "typecheck": "tsc --noEmit",
+    "publish:npm": "npm publish --access public"
   },
-  "description": "Repo for @tsonic/globals target-neutral global declarations"
+  "dependencies": {
+    "@tsonic/core": "10.0.46"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "keywords": [
+    "tsonic",
+    "typescript",
+    "types",
+    "globals",
+    "utility-types"
+  ],
+  "author": "Tsonic Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsoniclang/globals.git"
+  }
 }
