@@ -4,22 +4,22 @@ Global type definitions for Tsonic.
 
 ## Versioning
 
-This repo is versioned by **.NET major**:
+This repo is versioned by source contract major:
 
-- **.NET 10** → `versions/10/` → npm: `@tsonic/globals@10.x`
+- **10** → `versions/10/` → npm: `@tsonic/globals@10.x`
 
 When publishing, run: `npm publish versions/10 --access public`
 
-This package provides the CLR/default-surface global type layer:
+This package provides a target-neutral minimal global type layer:
 1. **Base types** required by TypeScript (Array, String, Object, Function, etc.)
-2. **Shared types** used by the CLR/default surface (utility types, iterators, Promise, Symbol)
+2. **Shared types** used by source packages (utility types, iterators, Promise, Symbol)
 
 `@tsonic/globals` is declaration-only. It does not ship runtime JavaScript
 helpers and does not define the active workspace surface by itself.
 
 ## Usage
 
-### Dotnet mode (use this package alone)
+### Standalone no-lib mode
 
 ```bash
 npm install @tsonic/globals
@@ -34,7 +34,8 @@ npm install @tsonic/globals
 }
 ```
 
-Arrays use LINQ, strings use BCL methods.
+This package supplies declarations only. Runtime behavior is provided by the
+active surface and target implementation.
 
 ### JS surface
 

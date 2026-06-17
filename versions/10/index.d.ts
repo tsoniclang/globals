@@ -1,4 +1,3 @@
-/// <reference path="./core-globals.d.ts" />
-/// <reference path="./globals.d.ts" />
+import "./core-globals.d.ts";
 
 export {};

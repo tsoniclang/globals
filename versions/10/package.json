@@ -1,14 +1,12 @@
 {
   "name": "@tsonic/globals",
   "version": "10.0.46",
-  "description": "Global type definitions for Tsonic with BCL primitive methods",
+  "description": "Target-neutral minimal global type definitions for Tsonic",
   "main": "index.d.ts",
   "types": "index.d.ts",
   "files": [
     "index.d.ts",
     "core-globals.d.ts",
-    "globals.d.ts",
-    "tsonic.surface.json",
     "README.md",
     "LICENSE"
   ],
@@ -16,8 +14,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@tsonic/core": "10.0.46",
-    "@tsonic/dotnet": "10.0.46"
+    "@tsonic/core": "10.0.46"
   },
   "devDependencies": {
     "typescript": "5.9.3"
